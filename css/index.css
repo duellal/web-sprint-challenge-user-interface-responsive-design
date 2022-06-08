@@ -22,8 +22,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-    /* box-sizing: border-box;
-    border: 2px solid lightgrey; */
+    box-sizing: border-box;
+    border: 2px solid lightgrey;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -268,7 +268,6 @@ footer .firstLine nav .btm.btns{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
 }
 
 footer .copyright{
@@ -281,11 +280,19 @@ footer .copyright{
 
 /* mobile media query */
 @media (max-width: 428px) {
-    html{
-        font-size: 50%;
-    }
     /* header section */
-    
+    header{
+        flex-wrap:wrap;
+    }
+    header .title h1 a{
+        justify-content: center;
+        align-items: flex-start;
+    }
+    header .top.btns, .top.btns a{
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
 
     /* gallery section */
     .gallery {
