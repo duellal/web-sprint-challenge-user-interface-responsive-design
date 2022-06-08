@@ -22,6 +22,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    /* box-sizing: border-box;
+    border: 2px solid lightgrey; */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -65,6 +67,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: rgb(225, 239, 230);
 }
 
 h1 {
@@ -72,11 +75,11 @@ h1 {
 }
 
 h2 {
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 h3 {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 p, a {
@@ -85,6 +88,8 @@ p, a {
 
 /* header section */
 header {
+    display:flex;
+    justify-content: center;
     width: 100%;
     height: 100vh;
     background-image: url('../img/home-header.jpg');
@@ -92,6 +97,34 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 }
+header div{
+    width: 100%;
+    position:relative;
+    background-color: rgb(0, 4, 17, .5);
+}
+.title{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap:wrap;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+}
+.top.btns{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    text-decoration: none;
+}
+
+.social{
+    display:flex;
+    justify-content: space-between;
+    width: 20%
+}
+
 
 /* spacers */
 .spacer {
@@ -111,6 +144,22 @@ header {
     height: 100vh;
     text-align: center;
     background-color: rgb(0, 4, 17);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery .foodTitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1%;
 }
 
 /* about us section */
@@ -137,7 +186,7 @@ header {
     width: 100%;
 }
 
-.about-container .text {
+.about-container .text{
     width: 50%;
 }
 
@@ -194,10 +243,47 @@ footer {
     height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17);
+    color: rgb(225, 239, 230);
+}
+
+footer .firstLine{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+footer .mailing-list{
+    width: 30%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+} 
+
+footer .firstLine nav{
+    width: 70%;
+}
+footer .firstLine nav .btm.btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+footer .copyright{
+    background-color: rgb(0, 4, 17);
+    color: rgb(225, 239, 230);
+    font-size:1.6rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* mobile media query */
 @media (max-width: 428px) {
+    html{
+        font-size: 50%;
+    }
     /* header section */
     
 

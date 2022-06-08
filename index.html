@@ -6,8 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sprint Challenge - Home</title>
-	<link rel="indexStylesheet" href="css/index.css">
-	<link rel="menuStylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/index.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Rubik" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/5b12ffad4b.js" crossorigin="anonymous"></script>
 </head>
@@ -17,9 +16,8 @@
 		<!-- header -->
 		<header>
 			<div>
-				<img src="img/home-header.jpg" alt="Bar area with alochol on the back shelf and menus on either side">
 					<div class="title">
-						<h1 href="index.html">BLOOMTECH BAR AND GRILL</h1>
+						<h1><a href="index.html">BLOOMTECH BAR AND GRILL</a></h1>
 					</div>
 					<nav>
 						<div class="top btns">
@@ -29,10 +27,12 @@
 							<a href=#>Contact</a>
 						</div>
 					</nav>
+					<div>
 					<div class="social">
-						<a href=#><i class="fa-brands fa-facebook-square"></i></a>
-						<a href=#><i class="fa-brands fa-twitter-square"></i></a>
-						<a href=#><i class="fa-brands fa-instagram-square"></i></a>
+						<a><i class="fa-brands fa-facebook-square"></i></a>
+						<a><i class="fa-brands fa-twitter-square"></i></a>
+						<a><i class="fa-brands fa-instagram-square"></i></a>
+					</div>
 					</div>
 			</div>
 		</header>
@@ -40,7 +40,9 @@
 		<!-- gallery section -->
 		<section class="gallery">
 			<div>
-				<h2>OUR FOOD</h2>
+				<div class="foodTitle">
+					<h2>OUR FOOD</h2>
+				</div>
 				<div class="img toast">	
 					<img src="img/food-avocadotoast.jpg" alt="Avacado toast with tomato and egg">
 				</div>
@@ -144,10 +146,15 @@
 
 		<!-- footer -->
 		<footer>
+			<div class="firstLine">
 			<!-- email signup -->
 			<div class="mailing-list">
 				Join our mailing list!
+				<input type="email" required="email" value="Email Address">
+				<button href="mailto:mailinglist@bloomtechbarandgrill.com">
 				Sign Up
+				</button>
+				</input>
 			</div>
 			<!-- nav -->
 			<nav>
@@ -158,6 +165,7 @@
 					<a href=#>Contact</a>
 				</div>
 			</nav>
+			</div>
 			<!-- copyright -->
 			<div class="copyright">
 				©2022 BloomTech Restaurant Group, Inc. All Rights Reserved.
