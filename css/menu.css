@@ -103,20 +103,22 @@ header {
 
 header div {
     width: 100%;
-    position: relative;
+    position: fixed;
     background-color: rgb(0, 4, 17, .5);
 }
 
-.title {
+header div h1 a {
     display: flex;
     justify-content: center;
     width: 100%;
     flex-wrap: wrap;
     text-decoration: none;
+    font-size: 6rem;
 }
 
 nav {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .top.btns {
@@ -126,10 +128,20 @@ nav {
     text-decoration: none;
 }
 
+.top.btns a {
+    font-size: 2.5rem;
+}
+
+nav div {
+    display: flex;
+    justify-content: center;
+
+}
+
 .social {
     display: flex;
     justify-content: space-between;
-    width: 20%
+    width: 15%
 }
 
 /* spacer */
@@ -150,22 +162,25 @@ nav {
     width: 100%;
     height: auto;
     background-image: url('../img/staff-bartender.jpg');
-    background-color: rgb(0, 4, 17);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .menu .menu-container{
     display:flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 1%;
+    background-color: rgb(0, 4, 17);
+    opacity: 0.8;
 }
 
 .menu .menu-container h2{
     width:100%;
     display: flex;
     justify-content: center;
+    font-size:4rem;
 }
 
 .menu .menu-container .menu-section{
@@ -173,7 +188,7 @@ nav {
     display:flex;
     justify-content: space-around;
     flex-wrap:wrap;
-    padding: 1%;
+    padding: 10%;
 }
 
 .menu-section h3{
@@ -181,18 +196,22 @@ nav {
     width:100%;
     justify-content: flex-start;
     flex-wrap:wrap;
+    font-size:2.5rem;
+    padding: 2% 0;
 }
 
 .menu-item{
     width:100%;
     display: flex;
     flex-wrap:wrap;
+    padding:2% 0;
 }
 
 .menu-item h4{
     width:50%;
     display:flex;
     align-items: space-evenly;
+    font-size: 2rem;
 }
 
 .menu-item .price{
@@ -202,6 +221,7 @@ nav {
 
 .menu-item p{
     width: 100%;
+    font-size: 1.5rem;
 }
 
 
@@ -216,31 +236,47 @@ footer {
     color: rgb(225, 239, 230);
 }
 
-footer .firstLine {
-    display: flex;
-    flex-wrap: wrap;
+footer nav {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 footer .mailing-list {
-    width: 30%;
+    width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 0 2%;
 }
 
-footer .firstLine nav {
-    width: 70%;
-}
-
-footer .firstLine nav .btm.btns {
+footer .mailing-list h4 {
+    font-size: 2.5rem;
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mailing-list input {
+    width: 80%;
+}
+
+.mailing-list button {
+    width: 20%;
+}
+
+footer nav .btm.btns {
+    width: 65%;
     display: flex;
     justify-content: space-around;
 }
 
-footer .copyright {
+footer nav .btm.btns a {
+    font-size: 2rem;
+}
+
+.copyright {
     background-color: rgb(0, 4, 17);
     color: rgb(225, 239, 230);
     font-size: 1.6rem;
@@ -248,15 +284,55 @@ footer .copyright {
     justify-content: flex-end;
 }
 
+.copyright p{
+    font-size: 1.6rem;
+}
+
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    .header-title {
-        width: 75%;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 4rem;
-    }
+    header div {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+    
+        header div h1 {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+    
+        header div h1 a {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            font-size: 4rem;
+            padding: 1% 0;
+        }
+    
+        .top.btns,
+        .top.btns a {
+            flex-wrap: wrap;
+            width: 100%;
+        }
+    
+        .top.btns a {
+            display: flex;
+            justify-content: center;
+            font-size: 2rem;
+        }
+    
+        .social {
+            width: 40%;
+        }
+    
+        .social a i {
+            font-size: 2rem
+        }
 
     /* menu */
     .menu {
