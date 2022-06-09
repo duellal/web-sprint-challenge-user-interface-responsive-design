@@ -22,6 +22,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    box-sizing: border-box;
+    /* border: 2px solid lightgrey; */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -65,6 +67,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: rgb(225, 239, 230);
 }
 
 h1 {
@@ -72,31 +75,83 @@ h1 {
 }
 
 h2 {
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 h3 {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 p, a {
     font-size: 3rem;
 }
 
+body{
+    background-color: rgb(0, 4, 17);
+}
+
 /* header section */
 header {
+    display:flex;
+    justify-content: center;
     width: 100%;
     height: 100vh;
     background-image: url('../img/home-header.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    text-align:center;
 }
+header div {
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    background-color: rgb(0, 4, 17, .7);
+}
+
+header div h1 a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    flex-wrap: wrap;
+    text-decoration: none;
+    font-size: 6rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top.btns{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+}
+.top.btns a{
+    font-size: 2.5rem;
+}
+
+nav div{
+    display: flex;
+    justify-content: center;
+
+}
+.social{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+
 
 /* spacers */
 .spacer {
     width: 100%;
-    height: 20vh;
+    height: 10vh;
     background-color: rgb(0, 4, 17);
 }
 .spacer-sm {
@@ -111,15 +166,43 @@ header {
     height: 100vh;
     text-align: center;
     background-color: rgb(0, 4, 17);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery .foodTitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.gallery .allPhotos{
+    width: 80%;
+}
+
+.gallery .img{
+    width:30%;
+}
+
+.gallery .img img{
+    width:100%;
+}
+
+.gallery div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1%;
 }
 
 /* about us section */
 .about {
     width: 100%;
-    height: 75vh;
+    height: 80vh;
     text-align: center;
     background-image: url("../img/staff-cooks.jpg");
-    background-size: cover;
+    background-size:contain;
     background-position: top;
     background-repeat: no-repeat;
 }
@@ -129,16 +212,28 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background-color: rgb(0, 4, 17, .8);
 }
 
 .about h2 {
     width: 100%;
+    padding-top: 3%;
+    padding-bottom: 6%;
+    font-size: 4rem;
 }
 
-.about-container .text {
+.about-container .text{
     width: 50%;
+    height: 60vh;
+}
+
+.text h3{
+    font-size: 3rem;
+}
+
+.text p{
+    font-size: 1.8rem;
 }
 
 /* contact us section */
@@ -157,16 +252,19 @@ header {
     background-color: rgb(0, 4, 17, .8);
 }
 
-.contact h2 {
+.contact .contact-container h2 {
     padding-top: 5vh;
+    font-size: 3.5rem;
 }
 
-.contact h3 {
+.contact .contact-container h3 {
     padding-top: 2.5vh;
+    font-size:3rem;
 }
 
-.contact p {
-    padding: .5vh 0;
+.contact .contact-container p, .contact .contact-container .contacts a{
+    padding: 0 0;
+    font-size: 1.8rem;
 }
 
 .info {
@@ -188,44 +286,191 @@ header {
     width: 25%;
 }
 
+.contact p, .contact a{
+    font-size: 2rem;
+}
+
 /* footer section */
 footer {
     width: 100%;
     height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17);
+    color: rgb(225, 239, 230);
+}
+
+footer nav{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer .mailing-list{
+    width: 35%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 3%;
+} 
+
+footer .mailing-list h4{
+    font-size:2.4rem;
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mailing-list input{
+    width:70%;
+    font-size: 1.8rem;
+}
+
+.mailing-list button{
+    width:30%;
+    font-size: 1.8rem;
+}
+
+footer nav .btm.btns{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer nav .btm.btns a{
+    font-size: 1.6rem;
+}
+
+.copyright{
+    background-color: rgb(0, 4, 17);
+    color: rgb(225, 239, 230);
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 8%;
+}
+
+.copyright p{
+    font-size: 1.2rem;
 }
 
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
+    header {
+            height: 105vh;
+        }
     
+        header div {
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+    
+        header div h1 {
+            width: 80%;
+            padding-top: 2%;
+        }
+    
+        header div h1 a {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            font-size: 3.5rem;
+        }
+    
+        nav {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            padding: 10% 0;
+        }
+    
+        .top.btns {
+            height: 20vh;
+        }
+    
+        .top.btns a {
+            height: 5vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 2.2rem;
+        }
+    
+        nav div {
+            width: 50%;
+            height: 8vh;
+        }
+    
+        .social {
+            justify-content: space-evenly;
+            width: 80%;
+        }
+    
+        .social a i {
+            font-size: 2rem;
+        }
+    
+        /* Spacer */
+        .spacer {
+            height: 17vh;
+        }
 
     /* gallery section */
     .gallery {
         height: auto;
+        margin-top:4%;
+        background-color: rgb(0, 4, 17);
+    }
+    .gallery .foodTitle{
+        padding: 5%;
+        background-color: rgb(0, 4, 17);
+    }
+    .gallery .img{
+        margin:4%;
     }
     
     /* about us section */
 
     .about {
-        height: 200vh;
+        height: auto;
     }
-    
-    .about h2 {
+
+    .about .about-container h2 {
         width: 100%;
-        padding-top: 5vh;
+        padding: 15vh 0;
+        justify-content: flex-start;
     }
     
-    .about-container .text {
-        width: 85%;
+    .about .about-container .text{
+        width: 95%;
+    }
+
+    .text h3{
+        font-size:4.3rem;
+        padding-top:5vh;
+    }
+    .text p{
+        font-size:2.5rem;
     }
     
     /* contact us section */
     .contact h3 {
         padding-top: 2.5vh;
+        font-size: 4.5rem;
     }
-    
+
+    .contact p, .contacts a{
+        font-size:2.5rem;
+        padding: .4vh 0;
+    }
+
     .info {
         flex-wrap: wrap;
     }
@@ -245,9 +490,66 @@ footer {
     }
 
     /* footer section */
-    footer {
-        height: auto;
-        padding-top: 2.5vh;
-        font-size: 2rem;
-    }
+           footer {
+               display: flex;
+               justify-content: center;
+               flex-wrap: wrap;
+               height: 50vh;
+               font-size: 2rem;
+               text-align: center;
+           }
+    
+           footer nav {
+               display: flex;
+               justify-content: center;
+               flex-wrap: wrap;
+               align-items: center;
+               width: 95%;
+           }
+    
+           footer nav .mailing-list {
+               width: 100%;
+               height: 13vh;
+           }
+    
+           footer nav .mailing-list h4 {
+               font-size: 2rem;
+               padding: 2.5%;
+           }
+    
+           footer nav .mailing-list input {
+               width: 100%;
+               font-size: 1.6rem;
+           }
+    
+           footer nav .mailing-list button {
+               width: 100%;
+               font-size: 1.6rem;
+           }
+    
+           footer nav .btm.btns {
+               width: 100%;
+               height: 20vh;
+               flex-wrap: wrap;
+           }
+    
+           footer nav .btm.btns a {
+               height: 5vh;
+               width: 100%;
+               display: flex;
+               justify-content: center;
+               font-size: 2.2rem;
+           }
+    
+           .copyright {
+               width: 75%;
+               height: 8vh;
+           }
+    
+           .copyright p {
+               font-size: 1.35rem;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+           }
 }
